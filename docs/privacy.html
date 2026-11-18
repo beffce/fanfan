@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="data:," />
+    <title>翻翻页 FANFAN · 隐私政策 / Privacy Policy</title>
+    <style>
+      button, [role="button"], select, summary, input:not([type="checkbox"], [type="radio"]) { min-height: 2rem; }
+
+      :root {
+        --bg: #f7f8fa;
+        --paper: #ffffff;
+        --ink: #1c2430;
+        --ink-soft: #46536a;
+        --ink-faint: #71809a;
+        --line: #e2e7ee;
+        --blue: #0087fc;
+        --blue-dark: #0069c9;
+        --orange: #fd7717;
+        --note-bg: #fff6ec;
+        --note-line: #ffd9ae;
+        --note-ink: #7a4a12;
+        --radius: 14px;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #10141b;
+          --paper: #171d28;
+          --ink: #e8edf5;
+          --ink-soft: #b3bfd2;
+          --ink-faint: #8494ad;
+          --line: #2a3345;
+          --blue: #3aa5ff;
+          --blue-dark: #6db9ff;
+          --note-bg: #2b2113;
+          --note-line: #5c431d;
+          --note-ink: #f2c98c;
+        }
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+          "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+        line-height: 1.75;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .wrap { max-width: 780px; margin: 0 auto; padding: 28px 20px 72px; }
+
+      /* ---------- header ---------- */
+      .masthead {
+        display: flex; align-items: center; gap: 14px;
+        padding: 6px 2px 22px;
+      }
+      .mark {
+        flex: none; width: 52px; height: 52px; border-radius: 13px;
+        background: var(--blue); color: #fff; position: relative;
+        display: flex; align-items: center; justify-content: center;
+        font-weight: 800; font-size: 21px; letter-spacing: .02em;
+        font-family: "Arial Rounded MT Bold", -apple-system, sans-serif;
+      }
+      .mark::after {
+        content: ""; position: absolute; top: 8px; left: 50%;
+        width: 9px; height: 9px; margin-left: -4.5px; border-radius: 50%;
+        background: var(--orange);
+      }
+      .mark span { transform: translateY(3px); }
+      .brand-name { font-size: 20px; font-weight: 700; line-height: 1.25; }
+      .brand-sub { font-size: 13px; color: var(--ink-faint); letter-spacing: .14em; font-weight: 600; }
+
+      h1 {
+        font-size: clamp(28px, 5.4vw, 38px);
+        line-height: 1.25; margin: 4px 0 8px; font-weight: 800; letter-spacing: -.01em;
+      }
+      .meta { color: var(--ink-faint); font-size: 14px; margin: 0 0 20px; }
+      .meta b { color: var(--ink-soft); font-weight: 600; }
+
+      .lead {
+        font-size: 16.5px; color: var(--ink-soft);
+        border-left: 3px solid var(--blue);
+        padding: 2px 0 2px 16px; margin: 0 0 26px;
+      }
+      .lead strong { color: var(--ink); }
+
+      /* ---------- toolbar ---------- */
+      .toolbar {
+        display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+        margin: 0 0 22px;
+      }
+      .seg {
+        display: inline-flex; background: var(--paper);
+        border: 1px solid var(--line); border-radius: 999px; padding: 3px;
+      }
+      .seg button {
+        border: 0; background: transparent; color: var(--ink-soft);
+        font: inherit; font-size: 14px; font-weight: 600;
+        padding: 6px 18px; border-radius: 999px; cursor: pointer; min-height: 36px;
+      }
+      .seg button[aria-pressed="true"] { background: var(--blue); color: #fff; }
+      .dl-btn {
+        margin-left: auto; display: inline-flex; align-items: center; gap: 8px;
+        border: 1px solid var(--blue); color: var(--blue-dark);
+        background: transparent; font: inherit; font-size: 14px; font-weight: 600;
+        padding: 7px 16px; border-radius: 999px; cursor: pointer; min-height: 38px;
+      }
+      .dl-btn:hover { background: var(--blue); color: #fff; }
+      .dl-btn svg { flex: none; }
+
+      .note {
+        background: var(--note-bg); border: 1px solid var(--note-line);
+        color: var(--note-ink); border-radius: var(--radius);
+        padding: 13px 16px; font-size: 14px; line-height: 1.65; margin: 0 0 26px;
+      }
+      .note b { font-weight: 700; }
+      .note code {
+        font-family: ui-monospace, "SF Mono", Consolas, monospace; font-size: 13px;
+        background: rgba(0,0,0,.06); padding: 1px 6px; border-radius: 5px;
+      }
+      @media (prefers-color-scheme: dark) { .note code { background: rgba(255,255,255,.1); } }
+
+      /* ---------- document ---------- */
+      .doc {
+        background: var(--paper); border: 1px solid var(--line);
+        border-radius: var(--radius); padding: clamp(22px, 5vw, 44px);
+      }
+      .doc section { margin: 0 0 30px; }
+      .doc section:last-child { margin-bottom: 0; }
+      .doc h2 {
+        font-size: 18px; font-weight: 700; margin: 0 0 8px;
+        display: flex; gap: 10px; align-items: baseline;
+      }
+      .doc h2 .no { color: var(--blue); font-size: 15px; font-weight: 800; flex: none; }
+      .doc p { margin: 0 0 10px; color: var(--ink-soft); font-size: 15.5px; }
+      .doc p:last-child { margin-bottom: 0; }
+      .doc ul { margin: 4px 0 10px; padding-left: 22px; color: var(--ink-soft); font-size: 15.5px; }
+      .doc li { margin: 3px 0; }
+      .doc strong { color: var(--ink); }
+      .doc a { color: var(--blue-dark); }
+      .contact-email {
+        font-family: ui-monospace, "SF Mono", Consolas, monospace; font-size: 14px;
+        white-space: nowrap;
+      }
+
+      footer {
+        margin-top: 28px; text-align: center; color: var(--ink-faint); font-size: 13px;
+      }
+      footer .dot { color: var(--orange); }
+
+      [hidden] { display: none !important; }
+      @media (max-width: 520px) {
+        .dl-btn { margin-left: 0; }
+        .doc { padding: 22px 18px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+
+      <div class="masthead">
+        <div class="mark" aria-hidden="true"><span>FF</span></div>
+        <div>
+          <div class="brand-name">翻翻页</div>
+          <div class="brand-sub">FANFAN</div>
+        </div>
+      </div>
+
+      <div class="toolbar" role="group" aria-label="Language / 语言">
+        <div class="seg">
+          <button type="button" id="btn-zh" aria-pressed="true">中文</button>
+          <button type="button" id="btn-en" aria-pressed="false">English</button>
+        </div>
+        <button type="button" class="dl-btn" id="dl">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m6.5 10.5 5.5 5.5 5.5-5.5"/><path d="M4 20h16"/></svg>
+          <span data-zh>下载 privacy.html</span><span data-en hidden>Download privacy.html</span>
+        </button>
+      </div>
+
+      <!-- ================= 中文 ================= -->
+      <div data-zh>
+        <h1>隐私政策</h1>
+        <p class="meta">应用：<b>翻翻页 FANFAN — PDF Editor &amp; Converter</b>（Windows 桌面应用）<br />
+        生效日期：<b>2026 年 11 月 18 日</b> · 发布者：<b>爱动乐娱</b></p>
+
+        <p class="lead">一句话版本：<strong>翻翻页在你的电脑本地处理文件，不收集、不上传、不出售任何个人信息。</strong>你打开的 PDF 永远不会离开你的设备。</p>
+
+        <div class="doc">
+          <section>
+            <h2><span class="no">1</span>适用范围</h2>
+            <p>本政策适用于「翻翻页 FANFAN」（以下简称“本应用”），一款通过 Microsoft Store 分发的 Windows PDF 阅读、编辑与格式转换工具。本应用由发布者「爱动乐娱」提供。</p>
+          </section>
+
+          <section>
+            <h2><span class="no">2</span>我们不收集个人信息</h2>
+            <p>本应用<strong>不收集、不存储、不传输任何个人信息</strong>，包括但不限于：</p>
+            <ul>
+              <li>姓名、邮箱、电话号码等身份信息（联系邮箱仅用于你主动来信时回复）；</li>
+              <li>设备标识、广告标识或使用行为数据；</li>
+              <li>你打开、编辑或转换的任何文件及其内容。</li>
+            </ul>
+            <p>本应用不包含账号系统，不接入任何统计分析、广告或用户追踪服务。</p>
+          </section>
+
+          <section>
+            <h2><span class="no">3</span>文件在本地处理</h2>
+            <p>本应用的全部功能——阅读、翻页、编辑、格式转换、批量处理——都<strong>在你的设备本地完成</strong>。你选择的文件只会被本应用在本机读取和写入，<strong>不会上传到任何服务器</strong>，我们也没有服务器可以接收你的文件。文件保存在哪里、是否删除，完全由你决定。</p>
+          </section>
+
+          <section>
+            <h2><span class="no">4</span>网络连接</h2>
+            <p>本应用的核心功能不需要联网即可使用。本应用不会在后台向我们或任何第三方发送你的文件、文档内容或个人信息。仅在以下情形会发生系统层面的网络交互，且均由 Windows / Microsoft Store 完成，不经过我们：应用的下载与更新、应用内购买的支付与许可证验证。</p>
+          </section>
+
+          <section>
+            <h2><span class="no">5</span>应用内购买</h2>
+            <p>本应用为免费增值模式：基础功能免费，专业版（FANFAN Pro Unlock）通过 Microsoft Store 应用内购买解锁。请注意：</p>
+            <ul>
+              <li>支付由<strong>微软</strong>处理，我们<strong>不会接触或保存</strong>你的银行卡、支付账户等付款信息；</li>
+              <li>购买记录与许可证由你的微软账户管理，可跨设备恢复；</li>
+              <li>退款按 Microsoft Store 的政策办理；</li>
+              <li>微软对相关数据的处理适用<a href="https://privacy.microsoft.com/zh-cn/privacystatement" target="_blank" rel="noopener">《微软隐私声明》</a>。</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2><span class="no">6</span>第三方服务</h2>
+            <p>除上一节所述的 Microsoft Store（分发、更新、支付与许可证）之外，本应用不集成任何第三方服务、SDK 或数据平台。</p>
+          </section>
+
+          <section>
+            <h2><span class="no">7</span>儿童隐私</h2>
+            <p>本应用不面向特定年龄段收集数据。由于我们不收集任何个人信息，本应用同样不会收集儿童的个人信息。</p>
+          </section>
+
+          <section>
+            <h2><span class="no">8</span>联系我们</h2>
+            <p>如对本政策有任何疑问，可通过邮箱联系我们：<a class="contact-email" href="mailto:acczuo@gmail.com">acczuo@gmail.com</a>。</p>
+          </section>
+
+          <section>
+            <h2><span class="no">9</span>政策变更</h2>
+            <p>若本应用的功能变化导致数据处理方式改变，我们会先更新本政策并在本页公布新版本与生效日期，再随应用更新生效。在另行说明之前，本政策所述“本地处理、不收集、不上传”的口径保持不变。</p>
+          </section>
+        </div>
+      </div>
+
+      <!-- ================= English ================= -->
+      <div data-en hidden>
+        <h1>Privacy Policy</h1>
+        <p class="meta">App: <b>FANFAN — PDF Editor &amp; Converter</b> (Windows desktop app)<br />
+        Effective date: <b>November 18, 2026</b> · Publisher: <b>爱动乐娱</b></p>
+
+        <p class="lead">In one sentence: <strong>FANFAN processes your files locally on your computer. We do not collect, upload, or sell any personal information.</strong> The PDFs you open never leave your device.</p>
+
+        <div class="doc">
+          <section>
+            <h2><span class="no">1</span>Scope</h2>
+            <p>This policy applies to FANFAN (翻翻页, “the App”), a Windows PDF reader, editor, and converter distributed through the Microsoft Store. The App is published by 爱动乐娱.</p>
+          </section>
+
+          <section>
+            <h2><span class="no">2</span>We Collect No Personal Data</h2>
+            <p>The App <strong>does not collect, store, or transmit any personal information</strong>, including but not limited to:</p>
+            <ul>
+              <li>Identity information such as your name, email address, or phone number;</li>
+              <li>Device identifiers, advertising identifiers, or usage analytics;</li>
+              <li>Any file you open, edit, or convert, or its contents.</li>
+            </ul>
+            <p>The App has no account system and integrates no analytics, advertising, or user-tracking services.</p>
+          </section>
+
+          <section>
+            <h2><span class="no">3</span>Files Are Processed Locally</h2>
+            <p>Every feature of the App — reading, page flipping, editing, format conversion, and batch processing — runs <strong>entirely on your device</strong>. Files you choose are read and written only by the App on your own machine. They are <strong>never uploaded to any server</strong>; we operate no server that could receive them. Where your files are kept and whether they are deleted is entirely up to you.</p>
+          </section>
+
+          <section>
+            <h2><span class="no">4</span>Network Connections</h2>
+            <p>The App's core features work fully offline. The App never sends your files, document contents, or personal information to us or to any third party in the background. The only network activity is at the system level, handled by Windows and the Microsoft Store — not by us: downloading and updating the App, and processing in-app purchases and license verification.</p>
+          </section>
+
+          <section>
+            <h2><span class="no">5</span>In-App Purchases</h2>
+            <p>The App is freemium: core features are free, and the Pro version (FANFAN Pro Unlock) is unlocked through a Microsoft Store in-app purchase. Please note:</p>
+            <ul>
+              <li>Payment is processed by <strong>Microsoft</strong>. We <strong>never receive or store</strong> your card or payment account details;</li>
+              <li>Your purchase and license are tied to your Microsoft account and can be restored across your devices;</li>
+              <li>Refunds are handled under Microsoft Store policies;</li>
+              <li>Microsoft's handling of related data is governed by the <a href="https://privacy.microsoft.com/en-us/privacystatement" target="_blank" rel="noopener">Microsoft Privacy Statement</a>.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2><span class="no">6</span>Third-Party Services</h2>
+            <p>Other than the Microsoft Store (distribution, updates, payments, and licensing) described above, the App integrates no third-party services, SDKs, or data platforms.</p>
+          </section>
+
+          <section>
+            <h2><span class="no">7</span>Children's Privacy</h2>
+            <p>Because the App collects no personal information from anyone, it likewise collects no personal information from children.</p>
+          </section>
+
+          <section>
+            <h2><span class="no">8</span>Contact Us</h2>
+            <p>If you have any questions about this policy, contact us at <a class="contact-email" href="mailto:acczuo@gmail.com">acczuo@gmail.com</a>.</p>
+          </section>
+
+          <section>
+            <h2><span class="no">9</span>Changes to This Policy</h2>
+            <p>If future features change how data is handled, we will update this policy and publish the new version and its effective date on this page before the change takes effect. Until stated otherwise, the commitments above — local processing, no collection, no uploads — remain in force.</p>
+          </section>
+        </div>
+      </div>
+
+      <footer>翻翻页 FANFAN <span class="dot">●</span> 翻一翻，都搞定 · Flip. Read. Edit. Done.</footer>
+    </div>
+
+    <script>
+      (function () {
+        var btnZh = document.getElementById('btn-zh');
+        var btnEn = document.getElementById('btn-en');
+        function setLang(lang) {
+          document.querySelectorAll('[data-zh]').forEach(function (el) { el.hidden = lang !== 'zh'; });
+          document.querySelectorAll('[data-en]').forEach(function (el) { el.hidden = lang !== 'en'; });
+          btnZh.setAttribute('aria-pressed', lang === 'zh' ? 'true' : 'false');
+          btnEn.setAttribute('aria-pressed', lang === 'en' ? 'true' : 'false');
+          document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+        }
+        btnZh.addEventListener('click', function () { setLang('zh'); });
+        btnEn.addEventListener('click', function () { setLang('en'); });
+        if ((navigator.language || '').toLowerCase().indexOf('zh') !== 0) setLang('en');
+
+        /* ---- Download a standalone bilingual privacy.html for GitHub Pages (docs/privacy.html) ---- */
+        function standaloneHTML() {
+          var zh = document.querySelector('div[data-zh]').innerHTML;
+          var en = document.querySelector('div[data-en]').innerHTML;
+          return '<!doctype html>\n<html lang="zh-CN">\n<head>\n<meta charset="utf-8" />\n' +
+            '<meta name="viewport" content="width=device-width, initial-scale=1" />\n' +
+            '<title>翻翻页 FANFAN · 隐私政策 / Privacy Policy</title>\n' +
+            '<style>body{font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;' +
+            'max-width:760px;margin:0 auto;padding:32px 20px 64px;line-height:1.75;color:#1c2430;background:#fff}' +
+            'h1{font-size:30px;margin:0 0 6px}h2{font-size:18px;margin:26px 0 6px}p,li{color:#46536a;font-size:15.5px}' +
+            '.meta{color:#71809a;font-size:14px}.lead{border-left:3px solid #0087fc;padding-left:14px;color:#46536a}' +
+            '.no{color:#0087fc;margin-right:8px}a{color:#0069c9}hr{border:0;border-top:1px solid #e2e7ee;margin:44px 0}' +
+            '.contact-email{font-family:monospace}' +
+            '@media (prefers-color-scheme: dark){body{background:#171d28;color:#e8edf5}p,li,.lead{color:#b3bfd2}}' +
+            '<\/style>\n</head>\n<body>\n' + zh + '\n<hr />\n' + en + '\n</body>\n</html>';
+        }
+        document.getElementById('dl').addEventListener('click', function () {
+          var blob = new Blob([standaloneHTML()], { type: 'text/html;charset=utf-8' });
+          var url = URL.createObjectURL(blob);
+          var a = document.createElement('a');
+          a.href = url; a.download = 'privacy.html';
+          document.body.appendChild(a); a.click();
+          document.body.removeChild(a);
+          setTimeout(function () { URL.revokeObjectURL(url); }, 2000);
+        });
+      })();
+    </script>
+  </body>
+</html>
